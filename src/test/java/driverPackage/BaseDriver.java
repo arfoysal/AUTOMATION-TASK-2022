@@ -2,6 +2,7 @@ package driverPackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.annotations.AfterSuite;
@@ -30,8 +31,12 @@ public class BaseDriver {
 			driver = new FirefoxDriver();
 
 		}
+		else {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+		}
 
-		driver.get("https://www.udemy.com");
+		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
 
 		PageDriver.getInstance().setDriver(driver);
