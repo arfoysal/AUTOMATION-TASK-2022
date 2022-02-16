@@ -16,22 +16,24 @@ public class T001_CreateNewAccount extends BaseDriver {
 			String mounth, String year, String companyName, String addressone, String Addresstwo, String city,
 			String statename, String zipCode, String countryname, String addiAddress, String homephone,
 			String mobilephone, String alias) throws InterruptedException {
-		
+
 		P001_Homepage homepage = new P001_Homepage();
 		P002_SignInpage signInpage = new P002_SignInpage();
 		P003_CreateAnAccountpage register = new P003_CreateAnAccountpage();
 		P004_MyAccountpage myAccountpage = new P004_MyAccountpage();
-		
+
 		homepage.clickSignInButton();
+
+		signInpage.waitForPageLoad();
 		signInpage.createAccountWithEmail(email);
-		
-		Thread.sleep(3000);
+
+		register.waitForPageLoad();
 		register.fillPersonalInformation(firstname, lastname, password, day, mounth, year);
 		register.fillYourAddress(companyName, addressone, Addresstwo, city, statename, zipCode, countryname,
 				addiAddress, homephone, mobilephone, alias);
-		Thread.sleep(2000);
+
+		myAccountpage.waitForPageLoad();
 		myAccountpage.clickSignOutButton();
-		Thread.sleep(2000);
 
 	}
 

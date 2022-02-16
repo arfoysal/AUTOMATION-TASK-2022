@@ -21,6 +21,7 @@ public class P007_Cartpage extends CommonMethods{
 	
 	public void clickContinueShopping() {
 		continueShoppingButton.click();
+		timeOut();
 	}
 	
 	public void clickProceedToCheckout() {

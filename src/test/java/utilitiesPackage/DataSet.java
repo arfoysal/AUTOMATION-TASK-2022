@@ -18,7 +18,8 @@ public class DataSet {
 
 	@DataProvider(name = "userInfo")
 	public static Object emailset() {
-		Object[][] obj = { { "John@gmal.com", "1234567541a" }};
+		Object[][] obj = { { "Johnnnw@gmal.com", "1234567541a", "Hello" },
+				{ "Jacccncyy@dffda.com", "455784567541a", "Tata" } };
 		return obj;
 
 	}

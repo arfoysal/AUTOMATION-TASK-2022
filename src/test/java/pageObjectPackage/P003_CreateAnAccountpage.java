@@ -6,15 +6,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
 import utilitiesPackage.CommonMethods;
-import utilitiesPackage.Timeout;
 
 public class P003_CreateAnAccountpage extends CommonMethods {
 
 	public P003_CreateAnAccountpage() {
 		PageFactory.initElements(PageDriver.getCurrentDriver(), this);
 	}
-
-	Timeout timer = new Timeout();
 
 	@FindBy(css = "label[for='id_gender1']")
 	public WebElement mrTitle;
@@ -113,7 +110,6 @@ public class P003_CreateAnAccountpage extends CommonMethods {
 		sendText(mobilePhoneField, mobilephone);
 		sendText(aliasfield, alias);
 		registerButton.click();
-		timer.waitForPageLoad();
 
 	}
 }

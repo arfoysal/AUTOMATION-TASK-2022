@@ -6,14 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
 import utilitiesPackage.CommonMethods;
-import utilitiesPackage.Timeout;
 
 public class P001_Homepage extends CommonMethods {
 	public P001_Homepage() {
 		PageFactory.initElements(PageDriver.getCurrentDriver(), this);
 	}
-
-	Timeout timer = new Timeout();
 
 	@FindBy(css = "a[title='Log in to your customer account']")
 	public WebElement signInButton;
@@ -29,7 +26,6 @@ public class P001_Homepage extends CommonMethods {
 
 	public void clickSignInButton() {
 		signInButton.click();
-		timer.waitForPageLoad();
 	}
 
 	public void hoverAndClickCasualDresses() {

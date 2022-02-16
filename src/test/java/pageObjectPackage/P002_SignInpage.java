@@ -6,14 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
 import utilitiesPackage.CommonMethods;
-import utilitiesPackage.Timeout;
 
-public class P002_SignInpage extends CommonMethods{
+public class P002_SignInpage extends CommonMethods {
 	public P002_SignInpage() {
 		PageFactory.initElements(PageDriver.getCurrentDriver(), this);
 	}
-
-	Timeout timer = new Timeout();
 
 	@FindBy(id = "email_create")
 	public WebElement emailInputField;
@@ -33,13 +30,15 @@ public class P002_SignInpage extends CommonMethods{
 	public void createAccountWithEmail(String email) {
 		sendText(emailInputField, email);
 		createAccountButton.click();
-		timer.waitForPageLoad();
+		timeOut();
+
 	}
 
 	public void loginwithEmailPassword(String email, String password) {
 		sendText(emailLoginField, email);
 		sendText(passwordLoginField, password);
 		signInButton.click();
-		timer.waitForPageLoad();
+		timeOut();
+
 	}
 }

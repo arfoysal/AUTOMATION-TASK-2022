@@ -1,135 +1,200 @@
 package utilitiesPackage;
 
+import java.time.Duration;
 import java.util.List;
-import java.util.Set;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driverPackage.PageDriver;
 
 public class CommonMethods {
+	
+	/**************************
+	 * Get Current Page URL * 
+	 * ************************
+	 */
 
 	public String currentPageUrl() {
 		return PageDriver.getCurrentDriver().getCurrentUrl();
 	}
-
+	
+	/**************************
+	 * Get Current Page Title * 
+	 * ************************
+	 */
+	
 	public String getTitle() {
 		return PageDriver.getCurrentDriver().getTitle();
 	}
-
-
-	public void clickOnNthNumberButton(By btn, int position) {
-		List<WebElement> allElements = PageDriver.getCurrentDriver().findElements(btn);
-		allElements.get(position - 1).click();
-
-	}
-
-	public String getText(By element) {
-		return PageDriver.getCurrentDriver().findElement(element).getText();
-	}
-
-	public int getSize(By element) {
-		return PageDriver.getCurrentDriver().findElements(element).size();
-	}
-
-	public String getAttributeValue(By element, String attribute) {
-		return PageDriver.getCurrentDriver().findElement(element).getAttribute(attribute);
-	}
-
-	public List<WebElement> getEls(By element) {
-		return PageDriver.getCurrentDriver().findElements(element);
-	}
+	
+	/**************************
+	 * Write in a input field * 
+	 * ************************
+	 */
 
 	public void sendText(WebElement element, String value) {
 		element.clear();
 		element.sendKeys(value);
 	}
+	
+	/******************************
+	 * Perform Hover on a element * 
+	 * ****************************
+	 */
 
 	public void hover(WebElement element) {
 		Actions actions = new Actions(PageDriver.getCurrentDriver());
 		actions.clickAndHold(element).build().perform();
 	}
+	
+	/***********************************
+	 * Handle shadow Dome Related Task * 
+	 * *********************************
+	 */
 
-	public void shadowDomPopUp(By host, By btn) {
-		WebElement shadowDomHostElement = PageDriver.getCurrentDriver().findElement(host);
+	public void shadowDomePopUp(WebElement host, By btn) {
 		// Finding the ShadowRoot in a WebElement
-		SearchContext context = shadowDomHostElement.getShadowRoot();
+		SearchContext context = host.getShadowRoot();
 		// finding the targeted element
 		context.findElement(btn).click();
 	}
+	
+	/******************************************
+	 * Handle Select Tag Related Element Task * 
+	 * ****************************************
+	 */
 
 	public void selectitem(WebElement element, String value) {
 		Select selectItems = new Select(element);
-		selectItems.selectByValue(value);;
-
+		selectItems.selectByValue(value);
 	}
 
-	public String currentlySelecteditem(By element) {
-		Select selectItems = new Select(PageDriver.getCurrentDriver().findElement(element));
+	public String selecteditemText(WebElement element) {
+		Select selectItems = new Select(element);
 		return selectItems.getFirstSelectedOption().getText();
-
 	}
 
-	public void listitem(By element, String visibleText) {
-		List<WebElement> listItems = PageDriver.getCurrentDriver().findElements(element);
-		for (WebElement item : listItems) {
-			if (item.getText().equals(visibleText)) {
-				item.click();
-				break;
-			}
-		}
-	}
-
-	public Boolean itemSelecteStatus(By element, String value) {
-		List<WebElement> listItems = PageDriver.getCurrentDriver().findElements(element);
-		for (WebElement item : listItems) {
-			if (item.getAttribute("value").equals(value)) {
-				return item.isSelected();
+	public Boolean itemSelectStatus(List<WebElement> elements, String value) {
+		for (WebElement element : elements) {
+			if (element.getAttribute("value").equals(value)) {
+				return element.isSelected();
 			}
 		}
 		return false;
 	}
+	
+	/*************************************
+	 * Handle List elements Related Task * 
+	 * ***********************************
+	 */
+	
+	public void clickOnNthNumberButton(List<WebElement> elements, int position) {
+		elements.get(position - 1).click();
+	}
+	
+	public void listitem(List<WebElement> elements, String visibleText) {
+		for (WebElement element : elements) {
+			if (element.getText().equals(visibleText)) {
+				element.click();
+				break;
+			}
+		}
+	}
+	
+	
+	
+	/**********************************
+	 * Handle JavaScript Related Task * 
+	 * ********************************
+	 */
 
 	public void clickOnAButtonJs(String script) {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
-		// WebElement el = (WebElement)(js.executeScript("return "+ script));
-		// js.executeScript("arguments[0].click();" ,el);
 		js.executeScript(script + ".click();");
 	}
 
-	public void highlighter(By element) {
-		WebElement el = PageDriver.getCurrentDriver().findElement(element);
+	public void highlighter(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
-		js.executeScript("arguments[0].setAttribute('style','border:2px solid red;background: beige');", el);
-
+		js.executeScript("arguments[0].setAttribute('style','border:2px solid red;background: beige');", element);
 	}
 
-	public void scorllToElement(WebElement element) {
+	public void scrollToElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
-	public void scorllInsideElement(String cssLocator, int offsetX, int offsetY) {
+	public void scrollInsideElement(String cssLocator, int offsetX, int offsetY) {
 		JavascriptExecutor js = (JavascriptExecutor) PageDriver.getCurrentDriver();
 		js.executeScript("document.querySelector('" + cssLocator + "').scrollBy(" + offsetX + "," + offsetY + ");");
 	}
 
-	/*
-	 * public void windows() { Set<String> handles =
-	 * PageDriver.getCurrentDriver().getWindowHandles(); }
+	/****************************
+	 * Handle Wait Related Task * 
+	 * **************************
 	 */
-	public void windowHandle() {
-		String parent = PageDriver.getCurrentDriver().getWindowHandle();
-		Set<String> handles = PageDriver.getCurrentDriver().getWindowHandles();
-		for (String handle : handles) {
-			if (!handle.equals(parent)) {
-				PageDriver.getCurrentDriver().switchTo().window(handle);
-			}
+	WebDriverWait wait;
+
+	public void timeOut() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
+
+	public void timeOut(int duretionMS) {
+		try {
+			Thread.sleep(duretionMS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public Alert waitForAlert() {
+		wait = new WebDriverWait(PageDriver.getCurrentDriver(), Duration.ofSeconds(30));
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		return alert;
+	}
+
+	public void waitForElement(By locator) {
+		wait = new WebDriverWait(PageDriver.getCurrentDriver(), Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+
+	public void waitForPageLoad() {
+		wait = new WebDriverWait(PageDriver.getCurrentDriver(), Duration.ofSeconds(30));
+		wait.until((ExpectedCondition<Boolean>) wd -> ((JavascriptExecutor) wd)
+				.executeScript("return document.readyState;").equals("complete"));
+	}
+
+	/*****************************
+	 * Handle Alert Related Task * 
+	 * ***************************
+	 */
+
+	public void alertAccept() {
+		Alert alert = waitForAlert();
+		alert.accept();
+	}
+
+	public void allertAccep(String value) {
+		Alert alert = waitForAlert();
+		alert.sendKeys(value);
+		alert.accept();
+	}
+
+	public void alertDismiss() {
+		Alert alert = waitForAlert();
+		alert.dismiss();
+	}
+
 }

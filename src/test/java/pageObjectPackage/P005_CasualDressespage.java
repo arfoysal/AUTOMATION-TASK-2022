@@ -19,8 +19,9 @@ public class P005_CasualDressespage extends CommonMethods {
 	public WebElement addToCartButton;
 
 	public void productAddToCart() {
-		scorllToElement(product);
+		scrollToElement(product);
 		hover(product);
 		addToCartButton.click();
+		timeOut();
 	}
 }

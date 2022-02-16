@@ -12,13 +12,24 @@ public class P006_T_Shirtspage extends CommonMethods {
 		PageFactory.initElements(PageDriver.getCurrentDriver(), this);
 	}
 
-	@FindBy(css = "a[title='Log in to your customer account']")
-	public WebElement signInButton;
+	@FindBy(id = "layered_id_attribute_group_14")
+	public WebElement filterBlueColorCheckbox;
 
-	@FindBy(id = "com.continuum.emi.calculator:id/btnCompare")
-	public WebElement compareLoansBtnElement;
+	@FindBy(className = "product-container")
+	public WebElement product;
 
-	public void clickSignInButton() {
-		signInButton.click();
+	@FindBy(xpath = "//span[normalize-space()='Add to cart']")
+	public WebElement addToCartButton;
+
+	public void filterBlueColor() {
+		filterBlueColorCheckbox.click();
+		timeOut();
+	}
+
+	public void productAddToCart() {
+		scrollToElement(product);
+		hover(product);
+		addToCartButton.click();
+		timeOut();
 	}
 }
