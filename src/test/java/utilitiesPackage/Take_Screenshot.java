@@ -1,5 +1,6 @@
 package utilitiesPackage;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -12,6 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 
 import driverPackage.PageDriver;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 
 public class Take_Screenshot {
 
@@ -25,6 +28,12 @@ public class Take_Screenshot {
 		String strtime = setdate();
 		File scFile = element.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(scFile, new File("./image/" + strtime + name + ".png"));
+	}
+
+	@Step("Taking a screenshot for {0}")
+	public static void takeScreenShot(String name) {
+		Allure.addAttachment(name, new ByteArrayInputStream(
+				((TakesScreenshot) PageDriver.getCurrentDriver()).getScreenshotAs(OutputType.BYTES)));
 	}
 
 	public String setdate() {

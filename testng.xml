@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testPackage.T001_CreateNewAccount"/>
-      <class name="testPackage.T002_Login_And_Purchase"/>
+      <class name="testCasesPackage.T001_CreateNewAccount"/>
+      <class name="testCasesPackage.T002_Login_And_Purchase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

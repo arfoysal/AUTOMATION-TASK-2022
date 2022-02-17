@@ -5,7 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
+import io.qameta.allure.Step;
 import utilitiesPackage.CommonMethods;
+import utilitiesPackage.Take_Screenshot;
 
 public class P003_CreateAnAccountpage extends CommonMethods {
 
@@ -24,6 +26,9 @@ public class P003_CreateAnAccountpage extends CommonMethods {
 
 	@FindBy(id = "customer_lastname")
 	public WebElement lastName;
+	
+	@FindBy(id = "email")
+	public WebElement emailField;
 
 	@FindBy(id = "passwd")
 	public WebElement passwordField;
@@ -78,29 +83,36 @@ public class P003_CreateAnAccountpage extends CommonMethods {
 
 	@FindBy(id = "submitAccount")
 	public WebElement registerButton;
+	
+	@FindBy(xpath = "//h3[normalize-space()='Your personal information']")
+	public WebElement pageSubHeading;
+	
+	public String pageSubHeadingText = "YOUR PERSONAL INFORMATION";
+	
 
-	@FindBy(className = "logout")
-	public WebElement logoutButton;
-
-	public void fillPersonalInformation(String fisrtname, String lastname, String password, String day, String mounth,
+	@Step("Provide New User Personal Information")
+	public void fillPersonalInformation(String fisrtname, String lastname, String password, String day, String month,
 			String year) {
 		mrTitle.click();
 		sendText(firstName, fisrtname);
 		sendText(lastName, lastname);
 		sendText(passwordField, password);
 		selectitem(dayforDOB, day);
-		selectitem(monthforDOB, mounth);
+		selectitem(monthforDOB, month);
 		selectitem(yearforDOB, year);
 		newsletter.click();
 		offer.click();
+		// Taking a screenshot for reporting purpose
+		Take_Screenshot.takeScreenShot("Personal Information");
 	}
 
-	public void fillYourAddress(String companyName, String addressone, String Addresstwo, String city, String statename,
+	@Step("Provide New User Address Information")
+	public void fillYourAddress(String companyName, String addressone, String addresstwo, String city, String statename,
 			String zipCode, String countryname, String addiAddress, String homephone, String mobilephone,
 			String alias) {
 		sendText(companyNameField, companyName);
 		sendText(yourAddressOneField, addressone);
-		sendText(yourAddressTwoField, Addresstwo);
+		sendText(yourAddressTwoField, addresstwo);
 		sendText(cityfield, city);
 		selectitem(stateSelect, statename);
 		sendText(postCode, zipCode);
@@ -109,7 +121,12 @@ public class P003_CreateAnAccountpage extends CommonMethods {
 		sendText(homePhonefield, homephone);
 		sendText(mobilePhoneField, mobilephone);
 		sendText(aliasfield, alias);
-		registerButton.click();
+		// Taking a screenshot for reporting purpose
+		Take_Screenshot.takeScreenShot("Address Information");
 
+	}
+
+	public void clickOnRegisterButton() {
+		registerButton.click();
 	}
 }

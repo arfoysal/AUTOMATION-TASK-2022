@@ -1,5 +1,7 @@
 package driverPackage;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -29,16 +31,14 @@ public class BaseDriver {
 		} else if (browser.contains("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-
-		}
-		else {
+		} else {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		PageDriver.getInstance().setDriver(driver);
 	}
 

@@ -1,0 +1,366 @@
+{
+  "uid" : "4bf44bdb2508e8b7",
+  "name" : "Perform registration process for new users and Sign Out",
+  "fullName" : "testCasesPackage.T001_CreateNewAccount.registration",
+  "historyId" : "c39f393c04d874e674ae60c2cc0f0c3a",
+  "time" : {
+    "start" : 1645118066381,
+    "stop" : 1645118089196,
+    "duration" : 22815
+  },
+  "description" : "Test Description: This test will go to automationpractice.com and browse to the registration page. Then complete the registration process by providing new user Personal and address information. Finally, sign out from the system.",
+  "descriptionHtml" : "<p>Test Description: This test will go to automationpractice.com and browse to the registration page. Then complete the registration process by providing new user Personal and address information. Finally, sign out from the system.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1645118047186,
+      "stop" : 1645118065685,
+      "duration" : 18499
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "Test Description: This test will go to automationpractice.com and browse to the registration page. Then complete the registration process by providing new user Personal and address information. Finally, sign out from the system.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Sign In Button",
+      "time" : {
+        "start" : 1645118066721,
+        "stop" : 1645118070951,
+        "duration" : 4230
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Provide an Email address and click on create an Account button",
+      "time" : {
+        "start" : 1645118071096,
+        "stop" : 1645118071677,
+        "duration" : 581
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "johnKanir101@gmalla.com"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "Provide New User Personal Information",
+      "time" : {
+        "start" : 1645118074187,
+        "stop" : 1645118076897,
+        "duration" : 2710
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Taking a screenshot for Personal Information",
+        "time" : {
+          "start" : 1645118076611,
+          "stop" : 1645118076897,
+          "duration" : 286
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "378ba070b743fcbd",
+          "name" : "Personal Information",
+          "source" : "378ba070b743fcbd.png",
+          "type" : "image/png",
+          "size" : 108581
+        } ],
+        "parameters" : [ {
+          "name" : "name",
+          "value" : "Personal Information"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "fisrtname",
+        "value" : "John"
+      }, {
+        "name" : "lastname",
+        "value" : "Kanir"
+      }, {
+        "name" : "password",
+        "value" : "testpass123@"
+      }, {
+        "name" : "day",
+        "value" : "12"
+      }, {
+        "name" : "month",
+        "value" : "7"
+      }, {
+        "name" : "year",
+        "value" : "2000"
+      } ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Provide New User Address Information",
+      "time" : {
+        "start" : 1645118076897,
+        "stop" : 1645118080109,
+        "duration" : 3212
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Taking a screenshot for Address Information",
+        "time" : {
+          "start" : 1645118079865,
+          "stop" : 1645118080109,
+          "duration" : 244
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "39d5306bbe66698",
+          "name" : "Address Information",
+          "source" : "39d5306bbe66698.png",
+          "type" : "image/png",
+          "size" : 57545
+        } ],
+        "parameters" : [ {
+          "name" : "name",
+          "value" : "Address Information"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 1
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "companyName",
+        "value" : "AdventureSports"
+      }, {
+        "name" : "addressone",
+        "value" : "87 Nickel Road"
+      }, {
+        "name" : "addresstwo",
+        "value" : "2661 Kennedy Court"
+      }, {
+        "name" : "city",
+        "value" : "Kentucky"
+      }, {
+        "name" : "statename",
+        "value" : "6"
+      }, {
+        "name" : "zipCode",
+        "value" : "41002"
+      }, {
+        "name" : "countryname",
+        "value" : "21"
+      }, {
+        "name" : "addiAddress",
+        "value" : "Take first left after Jr. school"
+      }, {
+        "name" : "homephone",
+        "value" : "774-280-5944"
+      }, {
+        "name" : "mobilephone",
+        "value" : "606-402-2834"
+      }, {
+        "name" : "alias",
+        "value" : " My address"
+      } ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Taking a screenshot for Created Account",
+      "time" : {
+        "start" : 1645118084537,
+        "stop" : 1645118084890,
+        "duration" : 353
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "9c52afb65a7ec3c2",
+        "name" : "Created Account",
+        "source" : "9c52afb65a7ec3c2.png",
+        "type" : "image/png",
+        "size" : 121734
+      } ],
+      "parameters" : [ {
+        "name" : "name",
+        "value" : "Created Account"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "Click on Sign Out Button",
+      "time" : {
+        "start" : 1645118084890,
+        "stop" : 1645118089183,
+        "duration" : 4293
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1645118184364,
+      "stop" : 1645118185598,
+      "duration" : 1234
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "testCasesPackage.T001_CreateNewAccount"
+  }, {
+    "name" : "testClass",
+    "value" : "testCasesPackage.T001_CreateNewAccount"
+  }, {
+    "name" : "testMethod",
+    "value" : "registration"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Suite"
+  }, {
+    "name" : "suite",
+    "value" : "Test"
+  }, {
+    "name" : "subSuite",
+    "value" : "testCasesPackage.T001_CreateNewAccount"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-JFJ7DOJ"
+  }, {
+    "name" : "thread",
+    "value" : "15276@DESKTOP-JFJ7DOJ.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "johnKanir101@gmalla.com"
+  }, {
+    "name" : "arg1",
+    "value" : "John"
+  }, {
+    "name" : "arg10",
+    "value" : "Kentucky"
+  }, {
+    "name" : "arg11",
+    "value" : "6"
+  }, {
+    "name" : "arg12",
+    "value" : "41002"
+  }, {
+    "name" : "arg13",
+    "value" : "21"
+  }, {
+    "name" : "arg14",
+    "value" : "Take first left after Jr. school"
+  }, {
+    "name" : "arg15",
+    "value" : "774-280-5944"
+  }, {
+    "name" : "arg16",
+    "value" : "606-402-2834"
+  }, {
+    "name" : "arg17",
+    "value" : " My address"
+  }, {
+    "name" : "arg2",
+    "value" : "Kanir"
+  }, {
+    "name" : "arg3",
+    "value" : "testpass123@"
+  }, {
+    "name" : "arg4",
+    "value" : "12"
+  }, {
+    "name" : "arg5",
+    "value" : "7"
+  }, {
+    "name" : "arg6",
+    "value" : "2000"
+  }, {
+    "name" : "arg7",
+    "value" : "AdventureSports"
+  }, {
+    "name" : "arg8",
+    "value" : "87 Nickel Road"
+  }, {
+    "name" : "arg9",
+    "value" : "2661 Kennedy Court"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4bf44bdb2508e8b7.json",
+  "parameterValues" : [ "johnKanir101@gmalla.com", "John", "Kentucky", "6", "41002", "21", "Take first left after Jr. school", "774-280-5944", "606-402-2834", " My address", "Kanir", "testpass123@", "12", "7", "2000", "AdventureSports", "87 Nickel Road", "2661 Kennedy Court" ]
+}

@@ -1,0 +1,81 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-JFJ7DOJ",
+    "children" : [ {
+      "name" : "15276@DESKTOP-JFJ7DOJ.main(1)",
+      "children" : [ {
+        "name" : "Perform registration process for new users and Sign Out",
+        "uid" : "4bf44bdb2508e8b7",
+        "parentUid" : "83cf541ab3e1a6e1e2a8ccfd43a2a36c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645118066381,
+          "stop" : 1645118089196,
+          "duration" : 22815
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "johnKanir101@gmalla.com", "John", "Kentucky", "6", "41002", "21", "Take first left after Jr. school", "774-280-5944", "606-402-2834", " My address", "Kanir", "testpass123@", "12", "7", "2000", "AdventureSports", "87 Nickel Road", "2661 Kennedy Court" ]
+      }, {
+        "name" : "Perform Login, Purchase, and Logout",
+        "uid" : "5eafe2fba7fd517a",
+        "parentUid" : "83cf541ab3e1a6e1e2a8ccfd43a2a36c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645118109471,
+          "stop" : 1645118154355,
+          "duration" : 44884
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "johnKanir101@gmalla.com", "testpass123@", "Call before knock the door" ]
+      }, {
+        "name" : "Perform registration process for new users and Sign Out",
+        "uid" : "9fa43ba5a4342d22",
+        "parentUid" : "83cf541ab3e1a6e1e2a8ccfd43a2a36c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645118089387,
+          "stop" : 1645118109434,
+          "duration" : 20047
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "jacyjane101@dffda.com", "Jacy", "Indiana", "12", "55555", "21", "Take first Right after KFC", "317-529-7499", "317-425-8779", " My address", "Jane", "@testpass123", "28", "5", "1990", "Market Basket", "2358 Barfield Lane", "Indianapolis" ]
+      }, {
+        "name" : "Perform Login, Purchase, and Logout",
+        "uid" : "e447f6c3adc5f769",
+        "parentUid" : "83cf541ab3e1a6e1e2a8ccfd43a2a36c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1645118154374,
+          "stop" : 1645118183343,
+          "duration" : 28969
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ "jacyjane101@dffda.com", "@testpass123", "Be aware about dog" ]
+      } ],
+      "uid" : "83cf541ab3e1a6e1e2a8ccfd43a2a36c"
+    } ],
+    "uid" : "df67af098546c4d9a429f7d6edb335f2"
+  } ]
+}

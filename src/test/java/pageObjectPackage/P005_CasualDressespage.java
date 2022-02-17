@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
+import io.qameta.allure.Step;
 import utilitiesPackage.CommonMethods;
 
 public class P005_CasualDressespage extends CommonMethods {
@@ -17,11 +18,14 @@ public class P005_CasualDressespage extends CommonMethods {
 
 	@FindBy(xpath = "//span[normalize-space()='Add to cart']")
 	public WebElement addToCartButton;
+	
+	public String casualDressesPageTitle = "Casual Dresses - My Store";
 
+	@Step("Scroll to Product then Hover on Product and Click on add To Cart Button Button")
 	public void productAddToCart() {
 		scrollToElement(product);
 		hover(product);
 		addToCartButton.click();
-		timeOut();
+
 	}
 }

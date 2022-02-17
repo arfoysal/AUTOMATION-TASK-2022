@@ -1,0 +1,41 @@
+[ {
+  "uid" : "e447f6c3adc5f769",
+  "name" : "Perform Login, Purchase, and Logout",
+  "time" : {
+    "start" : 1645118154374,
+    "stop" : 1645118183343,
+    "duration" : 28969
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9fa43ba5a4342d22",
+  "name" : "Perform registration process for new users and Sign Out",
+  "time" : {
+    "start" : 1645118089387,
+    "stop" : 1645118109434,
+    "duration" : 20047
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4bf44bdb2508e8b7",
+  "name" : "Perform registration process for new users and Sign Out",
+  "time" : {
+    "start" : 1645118066381,
+    "stop" : 1645118089196,
+    "duration" : 22815
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5eafe2fba7fd517a",
+  "name" : "Perform Login, Purchase, and Logout",
+  "time" : {
+    "start" : 1645118109471,
+    "stop" : 1645118154355,
+    "duration" : 44884
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

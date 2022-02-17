@@ -18,9 +18,9 @@ import driverPackage.PageDriver;
 
 public class CommonMethods {
 	
-	/**************************
+	/************************
 	 * Get Current Page URL * 
-	 * ************************
+	 * **********************
 	 */
 
 	public String currentPageUrl() {
@@ -110,8 +110,6 @@ public class CommonMethods {
 		}
 	}
 	
-	
-	
 	/**********************************
 	 * Handle JavaScript Related Task * 
 	 * ********************************
@@ -186,7 +184,7 @@ public class CommonMethods {
 		alert.accept();
 	}
 
-	public void allertAccep(String value) {
+	public void allertAccept(String value) {
 		Alert alert = waitForAlert();
 		alert.sendKeys(value);
 		alert.accept();

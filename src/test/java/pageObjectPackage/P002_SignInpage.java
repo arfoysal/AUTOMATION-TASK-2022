@@ -5,7 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import driverPackage.PageDriver;
+import io.qameta.allure.Step;
 import utilitiesPackage.CommonMethods;
+import utilitiesPackage.Take_Screenshot;
 
 public class P002_SignInpage extends CommonMethods {
 	public P002_SignInpage() {
@@ -26,19 +28,23 @@ public class P002_SignInpage extends CommonMethods {
 
 	@FindBy(id = "SubmitLogin")
 	public WebElement signInButton;
+	
+	public String signinPageTitle = "Login - My Store";
 
+	@Step("Provide an Email address and click on create an Account button")
 	public void createAccountWithEmail(String email) {
 		sendText(emailInputField, email);
 		createAccountButton.click();
-		timeOut();
 
 	}
 
+	@Step("Provide an Email & Password and click on Sign In button")
 	public void loginwithEmailPassword(String email, String password) {
 		sendText(emailLoginField, email);
 		sendText(passwordLoginField, password);
+		// Taking a screenshot for reporting purpose
+		Take_Screenshot.takeScreenShot("Log In Information");
 		signInButton.click();
-		timeOut();
 
 	}
 }
