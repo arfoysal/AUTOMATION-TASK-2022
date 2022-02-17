@@ -38,6 +38,37 @@
 - Right Click on testng.xml file
 - Then select Run as TestNG
 
+## The Steps executed in these Automation are:
+### TestCase 01: T001_CreateNewAccount
+- Open the Opera browser.
+- Go to automationpractice Web Site.
+- Maximize the browser window.
+- Click on Sign In Button.
+- Provide an Email address and click on create an Account button.
+- Provide New User Personal Information.
+- Provide New User Address Information.
+- Click Register button and complete create new user process.
+- Click on Sign Out. 
+##### Run above steps again for second user.
+
+### TestCase 02: T002_Login_And_Purchase
+- Click on Sign In Button.
+- Provide an Email & Password and click on Sign In button
+- Hover on Dresses Button and Click on Casual Dresses Button
+- Scroll to Product then Hover on Product and Click on add To Cart Button Button
+- Click on continue Shopping Button From Cart details window
+- Click on T-Shirts Button
+- Filter Blue Color from CATALOG-Color section
+- Scroll to Product then Hover on Product and Click on add To Cart Button Button
+- Click on Proceed To Checkout Button From Cart details window
+- Review Cart Summary and click on Proceed To Checkout button
+- Review Address and write Additional Information then click on Proceed To Checkout button
+- Review Shipping details and checked Terms of service then click on Proceed To Checkout button
+- Scroll to Payment option and click on Pay By check
+- Click on confirm My Order Button to complete the checkout process
+- Click on Sign Out Button
+##### Run above steps again for second user.
+ 
 ## Authors
 
 - [@arfoysal](https://www.github.com/arfoysal)
