@@ -1,14 +1,8 @@
 # BrainStation23-AUTOMATION-TASK-2022
+This project automates the automationpractice.com website's
+multiple new user creation and purchase processes.
 # [Live Allure Report](https://arfoysal-bs23-automation-task-2022.netlify.app/)
 ## Link: https://arfoysal-bs23-automation-task-2022.netlify.app/
-
-## Report Screenshot 
-- summary
-![](./images/summary.png)
-- Create new Account 
-![](./images/createAccount.png)
-- Login and Purchase
-![](./images/purchase.png)
 
 ## Technology used
   
@@ -16,6 +10,7 @@
 - Language: Java  
 - Architecture: POM
 - Framework: TestNG
+- Reporting tool: Allure
 - IDE: Eclipse  
 
 ## Pre Requisites:
@@ -30,12 +25,12 @@
 - Set Configure build path libraries with JRE System Library 1.8 or above 
 - Goto to testDataPackage and open DataSet.java file...  
 ```
-    Edit email data for every user data for every run 
+    Update email data for every user data for every run 
     johnKanir101@gmalla.com  update like johnKanir102@gmalla.com
     jacyjane101@dffda.com  update like jacyjane102@dffda.com 
 ``` 
 ## How to Run the script:
-- Right Click on testng.xml file
+- Right Click on testng.xml file from project home directory
 - Then select Run as TestNG
 
 ## The Steps executed in these Automation are:
@@ -68,6 +63,14 @@
 - Click on confirm My Order Button to complete the checkout process
 - Click on Sign Out Button
 ##### Run above steps again for second user.
+## Report Screenshot 
+### Summary Report
+![](./images/summary.png)
+### Create new Account 
+![](./images/createAccount.png)
+### Login and Purchase
+![](./images/purchase.png)
+
  
 ## Authors
 
