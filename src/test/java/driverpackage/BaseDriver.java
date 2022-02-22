@@ -1,6 +1,6 @@
-package driverPackage;
+package driverpackage;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,7 +38,7 @@ public class BaseDriver {
 
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		PageDriver.getInstance().setDriver(driver);
 	}
 

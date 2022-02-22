@@ -1,12 +1,12 @@
-package pageObjectPackage;
+package page.objectpackage;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import driverPackage.PageDriver;
+import driverpackage.PageDriver;
 import io.qameta.allure.Step;
-import utilitiesPackage.CommonMethods;
+import utilitiespackage.CommonMethods;
 
 public class P004_MyAccountpage extends CommonMethods {
 	public P004_MyAccountpage() {

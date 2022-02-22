@@ -1,4 +1,4 @@
-package driverPackage;
+package driverpackage;
 
 import org.openqa.selenium.WebDriver;
 
@@ -17,7 +17,6 @@ public class PageDriver {
 		return instance;
 	}
 		
-
 	public WebDriver getDriver() {
 		return webDriver.get();
 	}

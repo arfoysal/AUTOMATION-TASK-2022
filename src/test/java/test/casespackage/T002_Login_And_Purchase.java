@@ -1,19 +1,19 @@
-package testCasesPackage;
+package test.casespackage;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import driverPackage.BaseDriver;
+import driverpackage.BaseDriver;
 import io.qameta.allure.Description;
-import pageObjectPackage.P001_Homepage;
-import pageObjectPackage.P002_SignInpage;
-import pageObjectPackage.P004_MyAccountpage;
-import pageObjectPackage.P005_CasualDressespage;
-import pageObjectPackage.P006_T_Shirtspage;
-import pageObjectPackage.P007_Cartpage;
-import pageObjectPackage.P008_Checkoutpage;
-import testDataPackage.DataSet;
-import utilitiesPackage.Take_Screenshot;
+import page.objectpackage.P001_Homepage;
+import page.objectpackage.P002_SignInpage;
+import page.objectpackage.P004_MyAccountpage;
+import page.objectpackage.P005_CasualDressespage;
+import page.objectpackage.P006_T_Shirtspage;
+import page.objectpackage.P007_Cartpage;
+import page.objectpackage.P008_Checkoutpage;
+import testdatapackage.DataSet;
+import utilitiespackage.Take_Screenshot;
 
 public class T002_Login_And_Purchase extends BaseDriver {
 

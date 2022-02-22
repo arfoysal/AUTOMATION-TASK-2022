@@ -1,11 +1,11 @@
-package utilitiesPackage;
+package utilitiespackage;
 
 import java.io.ByteArrayInputStream;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import driverPackage.PageDriver;
+import driverpackage.PageDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 

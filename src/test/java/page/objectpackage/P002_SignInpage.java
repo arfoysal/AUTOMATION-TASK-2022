@@ -1,13 +1,13 @@
-package pageObjectPackage;
+package page.objectpackage;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import driverPackage.PageDriver;
+import driverpackage.PageDriver;
 import io.qameta.allure.Step;
-import utilitiesPackage.CommonMethods;
-import utilitiesPackage.Take_Screenshot;
+import utilitiespackage.CommonMethods;
+import utilitiespackage.Take_Screenshot;
 
 public class P002_SignInpage extends CommonMethods {
 	public P002_SignInpage() {

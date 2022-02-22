@@ -1,16 +1,16 @@
-package testCasesPackage;
+package test.casespackage;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import driverPackage.BaseDriver;
+import driverpackage.BaseDriver;
 import io.qameta.allure.Description;
-import pageObjectPackage.P001_Homepage;
-import pageObjectPackage.P002_SignInpage;
-import pageObjectPackage.P003_CreateAnAccountpage;
-import pageObjectPackage.P004_MyAccountpage;
-import testDataPackage.DataSet;
-import utilitiesPackage.Take_Screenshot;
+import page.objectpackage.P001_Homepage;
+import page.objectpackage.P002_SignInpage;
+import page.objectpackage.P003_CreateAnAccountpage;
+import page.objectpackage.P004_MyAccountpage;
+import testdatapackage.DataSet;
+import utilitiespackage.Take_Screenshot;
 
 public class T001_CreateNewAccount extends BaseDriver {
 
