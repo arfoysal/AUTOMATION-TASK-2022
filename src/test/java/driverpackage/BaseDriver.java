@@ -20,22 +20,24 @@ public class BaseDriver {
 	public void setUp() {
 
 		String browser = System.getProperty("browser", "chrome");
-		if (browser.contains("opera")) {
-			WebDriverManager.operadriver().setup();
-			driver = new OperaDriver();
 
-		} else if (browser.contains("chrome")) {
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
-
-		} else if (browser.contains("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
-		} else {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+		switch (browser) {
+			case "chrome":
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				break;
+			case "opera":
+				WebDriverManager.operadriver().setup();
+				driver = new OperaDriver();
+				break;
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				break;
+			default:
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
 		}
-
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
