@@ -22,7 +22,6 @@ multiple new user creation and purchase processes.
 - Chrome Browser
 
 ## Requirements:
-- Set Configure build path libraries with JRE System Library 1.8 or above 
 - Goto to testDataPackage and open DataSet.java file...  
 ```
     Update email data for every user data for every run 
