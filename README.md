@@ -1,4 +1,4 @@
-# BrainStation23-AUTOMATION-TASK-2022
+# AUTOMATION-TASK-2022
 This project automates the automationpractice.com website's
 multiple new user creation and purchase processes.
 # [Live Allure Report](https://arfoysal-bs23-automation-task-2022.netlify.app/)
